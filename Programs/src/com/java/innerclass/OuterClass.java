@@ -1,20 +1,19 @@
 package com.java.innerclass;
 
-public class Outerclass {
+public class OuterClass {   //Non static inner class example
 	private int salary=40000;
 	void request() {
 		System.out.println("Your salary is: "+salary);
 	}
-	public class Innerclass{
+	public class InnerClass{
 		void request() {
 			System.out.println("Yours salary is: "+salary);
 		}
 	}
 	public static void main(String args[]) {
-		Outerclass employee1=new Outerclass();
-		Outerclass.Innerclass deepthi=employee1.new Innerclass();
+		OuterClass employee1=new OuterClass();
+		OuterClass.InnerClass deepthi=employee1.new InnerClass();
 		employee1.request();
 		deepthi.request();
 	}
-
 }
